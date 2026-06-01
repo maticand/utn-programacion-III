@@ -1,0 +1,41 @@
+Checkpoint 2: Contrato API REST
+
+Requisitos de finalización
+
+Checkpoint 2: Contrato API REST 2
+
+El objetivo de esta actividad es tener definido el contrato entre el frontend y el backend de tu funcionalidad, y demostrar que la llamada HTTP de Angular al WorldCupCore funciona de punta a punta.
+
+No importa todavía la lógica completa del backend ni el diseño visual del frontend. Lo que tiene que funcionar es la comunicación entre las dos capas.
+
+ 
+Requerimientos:
+En el backend WorldCupCore:
+
+    El endpoint de tu funcionalidad existe y responde
+    Devuelve datos obtenidos de la WorldCupAPI (aunque sea sin procesar o con procesamiento mínimo, no hace falta tener la lógica de negocio completa)
+    El endpoint sigue las convenciones REST que vimos en clase: URL con sustantivo, verbo HTTP correcto, código de estado 200
+
+En el frontend WorldCupApp:
+
+    El service de tu funcionalidad llama al endpoint del WorldCupCore
+    El componente muestra los datos recibidos (aunque sea en formato crudo, no hace falta maquetado ni estilos todavía)
+    No hay errores en consola al cargar la pantalla
+
+Pasos para entregar:
+
+    Asegurate de que todo lo anterior funciona y está commiteado en `main`
+    Creá un tag en el repositorio partiendo de la rama `main` con las entregas de todas las funcionalidades de todos los integrantes (si ya lo hizo otro integrante, directamente salteate este paso. Sino, hacelo usando git tag checkpoint-2 y git push origin checkpoint-2 )
+    Entrá a GitHub, buscá el tag que creaste y copia el link o url
+    Pegá el link en el campo de texto de esta actividad
+
+Criterio de evaluación
+
+Este checkpoint, como los demás, no tiene nota numérica. Se califica como entregado y no-entregado. El objetivo es verificar que vienen avanzando bien y que la arquitectura es la correcta  antes de avanzar con la lógica y las vistas.
+Se revisa que:
+
+    El tag está creado, el código compila y el proyecto anda
+    La llamada desde Angular llega al backend
+    El endpoint responde con datos reales de la WorldCupAPI
+
+
