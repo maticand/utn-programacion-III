@@ -9,4 +9,8 @@ export interface GroupsViewModel {
   selectedGroup: string | null;
   selectedGroupData: GroupTableApiItem | null;
   groups: GroupTableApiItem[];
+
+  // Modelo para tipar la respuesta combinada que manda nuestro backend (BFF)
+  worldCup: Record<string, unknown>; // Tipado seguro para Checkpoint 2 sin usar "any"
 }
+

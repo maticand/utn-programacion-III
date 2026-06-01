@@ -12,9 +12,13 @@ import { MatchesService } from './services/matches.service';
 import { SimulationService } from './services/simulation.service';
 import { StatsAwardsService } from './services/stats-awards.service';
 import { WorldCupHistoryService } from './services/world-cup-history.service';
+import { BasicModule } from 'src/basic/basic.module';
 
 @Module({
-  imports: [AdminModule],
+  imports: [
+    AdminModule,
+    BasicModule
+  ],
   controllers: [
     SimulationController,
     GroupsController,

@@ -1,0 +1,28 @@
+{
+  "name": "UTN Mundial 2026 Environment",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:20",
+  "forwardPorts": [3101, 4101, 5101],
+  "portsAttributes": {
+    "3101": { "label": "WorldCupApp (Angular)", "onAutoForward": "notify" },
+    "4101": { "label": "WorldCupCore (NestJS BFF)", "onAutoForward": "notify" },
+    "5101": { "label": "WorldCupAPI (Cátedra)", "onAutoForward": "notify" }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "angular.ng-template",
+        "firsttris.vscode-jest-runner",
+        "nestjs.nestjs-blueprint",
+        "dbaeumer.vscode-eslint"
+      ]
+    }
+  },
+  "runArgs": [
+    "--userns=keep-id",
+    "--security-opt=label=disable",
+    "--name", "tp-worldcup"
+  ],
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/tp-worldcup-grupo-5,type=bind,Z",
+  "workspaceFolder": "/workspaces/tp-worldcup-grupo-5",
+  "postCreateCommand": "npm install -g @angular/cli @nestjs/cli"
+}

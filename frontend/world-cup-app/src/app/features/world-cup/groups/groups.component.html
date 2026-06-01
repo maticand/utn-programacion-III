@@ -2,5 +2,17 @@
   <div class="card-header">
     <span class="card-title">Fase de grupos</span>
   </div>
-  <p>Este componente debe ser desarrollado por el alumno.</p>
+
+  <article *ngIf="isLoading" class="loading-state">
+    <p>Cargando información desde el BFF...</p>
+  </article>
+
+  <article *ngIf="errorMessage" class="error-state">
+    <p><strong>Atención:</strong> {{ errorMessage }}</p>
+  </article>
+
+  <article *ngIf="!isLoading && !errorMessage && groupsData" class="data-state">
+    <p>Datos obtenidos correctamente (Checkpoint 2 completado):</p>
+    <pre>{{ groupsData | json }}</pre>
+  </article>
 </section>
